@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
+import GiphyList from './GiphyList';
+
 class SearchGifs extends Component {
   constructor() {
     super()
     this.state = {
-      gifs: []
+      gifs: null
     }
   }
 
@@ -22,12 +24,22 @@ class SearchGifs extends Component {
   }
 
   render() {
+    const { gifs } = this.state
+
     return (
       <div className='SearchGifs'>
         <input className='search-gifs'
           type='text'
           placeholder='search for a gif'
           onKeyUp={(e) => this.handleSubmit(e)}/>
+
+        {gifs ?
+          <GiphyList
+            gifs={gifs}
+          />
+          : null
+        }
+
       </div>
     );
   }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import GiphyList from './GiphyList';
 import SearchGifs from './SearchGifs';
 
 class App extends Component {

@@ -2,25 +2,28 @@ import React, { Component } from 'react';
 import axios from 'axios'
 
 class GiffyList extends Component {
-  constructor() {
-    super()
-    this.state = {
-      gifs: []
-    }
-  }
-
-  // componentDidMount() {
-  //   axios.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC')
-  //   .then(res => {
-  //     const gifs = res.data.
-  //   })
-  // }
-
 
   render() {
+    const { gifs } = this.props
+    const gif = gifs.map(gif => {
+      return (
+        <li
+          key={gif.id}>
+          <a href={gif.embed_url}
+            target='_blank'>
+            <img className='single-gif'
+              src={gif.images.downsized.url}
+              type='gif'
+            />
+          </a>
+        </li>
+      )
+    })
+
     return (
       <div className="GiffyList">
         <h2>Giffy List</h2>
+        <ul>{gif}</ul>
       </div>
     );
   }
