@@ -5,16 +5,18 @@ class SearchGifs extends Component {
   constructor() {
     super()
     this.state = {
-      gif: ''
+      gifs: []
     }
   }
 
   handleSubmit(e) {
-
     if(e.keyCode === 13) {
       axios.get(`http://api.giphy.com/v1/gifs/search?q=${e.target.value}&api_key=dc6zaTOxFJmzC `)
       .then(res => {
-        console.log(res);
+        const gifs = res.data.data
+        this.setState({
+          gifs
+        })
       })
     }
   }
@@ -25,7 +27,7 @@ class SearchGifs extends Component {
         <input className='search-gifs'
           type='text'
           placeholder='search for a gif'
-          onKeyUp={this.handleSubmit}/>
+          onKeyUp={(e) => this.handleSubmit(e)}/>
       </div>
     );
   }
