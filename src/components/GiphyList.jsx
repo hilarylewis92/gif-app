@@ -5,7 +5,7 @@ class GiffyList extends Component {
     const { gifs } = this.props
     const gif = gifs.map(gif => {
       return (
-        <li
+        <li className='gif-list-item'
           key={gif.id}>
           <a href={gif.embed_url}
             target='_blank'>
@@ -21,8 +21,9 @@ class GiffyList extends Component {
 
     return (
       <div className="GiffyList">
-        <h2>Giffy List</h2>
-        <ul>{gif}</ul>
+        <ul className='gif-list'>
+          {gif}
+        </ul>
       </div>
     );
   }
