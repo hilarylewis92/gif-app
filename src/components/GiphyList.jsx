@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import Masonry from 'react-masonry-component'
+
+var masonryOptions = {
+  transitionDuration: 1
+}
 
 class GiffyList extends Component {
   render() {
@@ -20,11 +25,15 @@ class GiffyList extends Component {
     })
 
     return (
-      <div className="GiffyList">
-        <ul className='gif-list'>
-          {gif}
-        </ul>
-      </div>
+      <Masonry
+        className={'gif-list'}
+        elementType={'ul'}
+        options={masonryOptions}
+        disableImagesLoaded={false}
+        updateOnEachImageLoad={false}
+      >
+        {gif}
+      </Masonry>
     );
   }
 }

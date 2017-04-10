@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { TweenLite } from 'gsap'
+import { TweenLite, Linear } from 'gsap'
 
 import GiphyList from './GiphyList';
 
@@ -28,7 +28,8 @@ class SearchGifs extends Component {
   gsapAnimation() {
     TweenLite.to('.SearchGifs', 1,
       {
-        margin: 0
+        margin: 0,
+        ease: Linear.easeNone,
       }
     )
   }

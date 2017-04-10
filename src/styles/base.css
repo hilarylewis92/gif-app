@@ -10,8 +10,8 @@ body {
 }
 
 h1 {
-  padding: 0.5em;
-  font-size: 2.5em;
+  margin: 2vw;
+  font-size: 2em;
 }
 
 input {
@@ -24,7 +24,7 @@ input {
   font-size: 1.5rem;
   color: #737373;
   letter-spacing: 1px;
-  text-indent: 1.5rem;
+  text-indent: 1rem;
 }
 
 /*header*/
@@ -32,22 +32,22 @@ input {
 /*nav*/
 
 /*content*/
-
 .SearchGifs {
-  margin-top: 300px;
+  margin-top: 25vh;
 }
 
 .gif-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  min-height:100vh;
+  width: 90vw;
+  margin: 2vw auto;
 }
 
 .gif-list-item {
-  display: flex;
-  margin: 0.5rem;
+  transition: left 0.5s;
+  margin: .25vw;
+}
+
+img {
+  width: 22vw;
 }
 
 /*footer*/
