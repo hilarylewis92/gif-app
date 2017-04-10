@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios'
 
 class GiffyList extends Component {
-
   render() {
     const { gifs } = this.props
     const gif = gifs.map(gif => {
@@ -14,6 +12,7 @@ class GiffyList extends Component {
             <img className='single-gif'
               src={gif.images.downsized.url}
               type='gif'
+              alt='giphy'
             />
           </a>
         </li>
