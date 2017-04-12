@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import Masonry from 'react-masonry-component'
+
+var masonryOptions = {
+  transitionDuration: 1
+}
 
 class GiffyList extends Component {
-
   render() {
     const { gifs } = this.props
     const gif = gifs.map(gif => {
       return (
-        <li
+        <li className='gif-list-item'
           key={gif.id}>
           <a href={gif.embed_url}
             target='_blank'>
             <img className='single-gif'
               src={gif.images.downsized.url}
               type='gif'
+              alt='giphy'
             />
           </a>
         </li>
@@ -21,10 +25,15 @@ class GiffyList extends Component {
     })
 
     return (
-      <div className="GiffyList">
-        <h2>Giffy List</h2>
-        <ul>{gif}</ul>
-      </div>
+      <Masonry
+        className={'gif-list'}
+        elementType={'ul'}
+        options={masonryOptions}
+        disableImagesLoaded={false}
+        updateOnEachImageLoad={false}
+      >
+        {gif}
+      </Masonry>
     );
   }
 }

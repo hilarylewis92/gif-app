@@ -1,0 +1,77 @@
+/*general styles*/
+html {
+  font-family: 'Open Sans', serif;
+}
+
+body {
+  font-size: 2em;
+  background-color: black;
+  text-align: center;
+}
+
+h1 {
+  margin: 2vw;
+  font-size: 2em;
+  color: white
+}
+
+input {
+  width: 35vw;
+  height: 3rem;
+  background: #F2F2F2;
+  border-radius: 2rem;
+  outline: none;
+  font-size: 1.5rem;
+  color: #737373;
+  letter-spacing: 1px;
+  text-indent: 1rem;
+}
+
+/*header*/
+
+/*nav*/
+
+/*content*/
+.SearchGifs {
+  margin-top: 25vh;
+}
+
+.gif-list {
+  width: 90vw;
+  margin: 2vw auto;
+}
+
+.gif-list-item {
+  transition: left 0.5s;
+  margin: .25vw;
+}
+
+img {
+  width: 22vw;
+}
+
+/*footer*/
+
+/*responsive*/
+@media(max-width: 500px) {
+  h1 {
+    margin: 2vw;
+    font-size: 1.5em;
+  }
+
+  input {
+    width: 90vw;
+  }
+
+  .gif-list {
+    width: 90vw;
+  }
+
+  .gif-list-item {
+    margin:auto;
+  }
+
+  img {
+    width: 90vw;
+  }
+}

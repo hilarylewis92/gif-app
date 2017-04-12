@@ -4,12 +4,14 @@
   "private": true,
   "devDependencies": {
     "axios": "^0.16.1",
+    "gsap": "^1.19.1",
     "react-gif": "^0.1.0",
     "react-scripts": "0.9.5"
   },
   "dependencies": {
     "react": "^15.5.3",
-    "react-dom": "^15.5.3"
+    "react-dom": "^15.5.3",
+    "react-masonry-component": "^5.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
