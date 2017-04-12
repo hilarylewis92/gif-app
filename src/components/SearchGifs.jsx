@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
 import { TweenLite, Linear } from 'gsap'
 
-import GiphyList from './GiphyList';
+import GiphyList from './GiphyList'
 
 class SearchGifs extends Component {
   constructor() {
     super()
     this.state = {
-      gifs: null
+      gifs: []
     }
   }
 
-  handleSubmit(e) {
+  keyDown(e) {
     if(e.keyCode === 13) {
       this.gsapAnimation()
       axios.get(`https://api.giphy.com/v1/gifs/search?q=${e.target.value}&api_key=dc6zaTOxFJmzC`)
@@ -42,7 +42,7 @@ class SearchGifs extends Component {
         <input className='search-gifs'
           type='text'
           placeholder='enter a keyword, then press enter'
-          onKeyUp={(e) => this.handleSubmit(e)}/>
+          onKeyDown={(e) => this.keyDown(e)}/>
 
         {gifs ?
           <GiphyList
@@ -50,10 +50,9 @@ class SearchGifs extends Component {
           />
           : null
         }
-
       </div>
-    );
+    )
   }
 }
 
-export default SearchGifs;
+export default SearchGifs

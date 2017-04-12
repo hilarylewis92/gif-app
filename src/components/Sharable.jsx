@@ -4,7 +4,6 @@ import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share'
 class Sharable extends Component {
   render() {
     const { FacebookShareButton, TwitterShareButton } = ShareButtons
-    const { FacebookShareCount } = ShareCounts
     const FacebookIcon = generateShareIcon('facebook')
     const TwitterIcon = generateShareIcon('twitter')
     const { shareUrl } = this.props
