@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Masonry from 'react-masonry-component'
+import Sharable from './Sharable'
 
 var masonryOptions = {
   transitionDuration: 1
@@ -20,6 +21,9 @@ class GiffyList extends Component {
               alt='giphy'
             />
           </a>
+          <Sharable
+            shareUrl={gif.embed_url}
+          />
         </li>
       )
     })
@@ -34,8 +38,8 @@ class GiffyList extends Component {
       >
         {gif}
       </Masonry>
-    );
+    )
   }
 }
 
-export default GiffyList;
+export default GiffyList

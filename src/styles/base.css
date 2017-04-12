@@ -4,36 +4,31 @@ html {
 }
 
 body {
-  font-size: 2em;
+  font-size: 25px;
   background-color: black;
   text-align: center;
 }
 
 h1 {
   margin: 2vw;
-  font-size: 2em;
-  color: white
+  font-size: 60px;
+  color: #F2F2F2;
 }
 
 input {
-  width: 35vw;
+  width: 450px;
   height: 3rem;
   background: #F2F2F2;
   border-radius: 2rem;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 20px;
   color: #737373;
-  letter-spacing: 1px;
   text-indent: 1rem;
 }
 
-/*header*/
-
-/*nav*/
-
 /*content*/
 .SearchGifs {
-  margin-top: 25vh;
+  margin-top: 30vh;
 }
 
 .gif-list {
@@ -44,23 +39,39 @@ input {
 .gif-list-item {
   transition: left 0.5s;
   margin: .25vw;
+  background-color: #F2F2F2;
+  border-radius: 0px 0px 5px 5px;
 }
 
 img {
   width: 22vw;
 }
 
-/*footer*/
+img:hover {
+  cursor: pointer;
+}
+
+.share-btn {
+  display: inline-block;
+  padding: 5px;
+  float: right;
+}
+
+.share-btn:hover {
+  cursor: pointer;
+}
 
 /*responsive*/
 @media(max-width: 500px) {
   h1 {
     margin: 2vw;
-    font-size: 1.5em;
+    font-size: 45px;
   }
 
   input {
     width: 90vw;
+    font-size: 20px;
+    letter-spacing: 0px;
   }
 
   .gif-list {
@@ -68,7 +79,7 @@ img {
   }
 
   .gif-list-item {
-    margin:auto;
+    margin: 5px auto;
   }
 
   img {
