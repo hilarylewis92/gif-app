@@ -44,10 +44,25 @@ input {
 .gif-list-item {
   transition: left 0.5s;
   margin: .25vw;
+  background-color: #737373;
 }
 
 img {
   width: 22vw;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.share-btn {
+  display: inline-block;
+  padding: 5px;
+  float: left;
+}
+
+.share-btn:hover {
+  cursor: pointer;
 }
 
 /*footer*/
